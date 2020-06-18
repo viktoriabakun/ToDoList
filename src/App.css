@@ -1,8 +1,14 @@
 .App {
   padding: 30px;
   display: flex;
+  max-width: 250px;
+  border: 10px solid #b4b4bf;
+  margin: 10px auto;
+  background-color: #09314c;
+  color: white;
 }
 
 .App > div {
   margin-right: 50px;
+  margin: 0 auto;
 }
