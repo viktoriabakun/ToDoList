@@ -12,3 +12,8 @@
   margin-right: 50px;
   margin: 0 auto;
 }
+
+ul > li > button {
+  margin: 5px;
+
+}
