@@ -4,7 +4,7 @@
   max-width: 250px;
   border: 10px solid #b4b4bf;
   margin: 10px auto;
-  background-color: #09314c;
+  background-color: #0e1a51;
   color: white;
 }
 
@@ -16,4 +16,13 @@
 ul > li > button {
   margin: 5px;
 
+}
+
+.error {
+  border: rgb(236, 109, 109) 2px solid;
+  background-color: #f6c9c9;
+}
+
+.error-message {
+  color: #f6c9c9;
 }
