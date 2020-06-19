@@ -22,14 +22,16 @@ function Todolist(props: PropsType) {
         setNewTaskTitle(event.currentTarget.value)
     }
     const onKeyPressHandler = (event: KeyboardEvent<HTMLInputElement>) => {
-        if (event.charCode === 13) {
+        if (event.charCode === 13 && newTaskTitle.trim() !== '') {
             props.addTask(newTaskTitle)
             setNewTaskTitle('')
         }
     }
     const addTaskFunction = () => {
-        props.addTask(newTaskTitle)
-        setNewTaskTitle('')
+        if (newTaskTitle.trim() !== ''){
+            props.addTask(newTaskTitle.trim())
+            setNewTaskTitle('')
+        }
     }
     const onAllChangeFilter = () => props.changeFilter('all')
     const onActiveChangeFilter = () => props.changeFilter('active')
