@@ -1,43 +1,44 @@
-.App {
-  padding: 30px;
-  display: flex;
-  border: 10px solid #b4b4bf;
-  margin: 10px auto;
-  background-color: #0e1a51;
-  color: white;
-}
+/*.App {*/
+/*  padding: 30px;*/
+/*  display: flex;*/
+/*  flex-wrap: nowrap;*/
+/*  margin: 10px auto;*/
+/*  background-color: #ffffff;*/
+/*  font-size: 20px;*/
+/*  color: black;*/
+/*}*/
 
-.App > div {
-  margin-right: 20px;
-  margin: 0 auto;
-  background-color: rgba(180, 180, 191, 0.54);
-  padding: 15px;
-  border: 1px solid rgba(255, 255, 255, 0.53);
-}
+/*.App > div {*/
+/*  margin-right: 20px;*/
+/*  margin: 0 auto;*/
+/*  background-color: #f3f0f0;*/
+/*  padding: 25px;*/
+/*  border: 1px solid rgba(255, 255, 255, 0.53);*/
+/*}*/
 
-ul > li > button {
-  margin: 5px;
+/*ul > li > button {*/
+/*  margin: 5px;*/
 
-}
+/*}*/
 
-.error {
-  border: rgb(236, 109, 109) 2px solid;
-  background-color: #f6c9c9;
-}
+/*.error {*/
+/*  border: rgb(236, 109, 109) 2px solid;*/
+/*  background-color: #f6c9c9;*/
+/*}*/
 
-.error-message {
-  color: #f6c9c9;
-}
+/*.error-message {*/
+/*  color: #f6c9c9;*/
+/*}*/
 
-.active-filter {
-  background-color: #0075FF;
-}
+/*.active-filter {*/
+/*  background-color: #0075FF;*/
+/*}*/
 
-button {
-  color: white;
-  background-color: #1d1d6e;
-}
+/*button {*/
+/*  color: white;*/
+/*  background-color: #1d1d6e;*/
+/*}*/
 
-.is-done {
-  opacity: 0.6;
-}
+/*.is-done {*/
+/*  opacity: 0.6;*/
+/*}*/
