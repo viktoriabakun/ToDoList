@@ -1,11 +1,37 @@
-import {TodoListType} from "../App";
+import {FiltersValuesType, TodoListType} from "../App";
 import {v1} from "uuid";
 
 
-type ActionType = {
-    type: string,
-    [key: string]: any
+type ActionType =
+    RemoveTodoListActionType |
+    AddTodoListActionType |
+    ChangeTitleActionType |
+    ChangeFilterActionType
+
+type RemoveTodoListActionType = {
+    type: 'REMOVE-TODOLIST'
+    id: string
 }
+
+type AddTodoListActionType = {
+    type: 'ADD-TODOLIST'
+    title: string
+}
+
+type ChangeTitleActionType = {
+    type: 'CHANGE-TODOLIST-TITLE'
+    id: string
+    title: string
+}
+
+type ChangeFilterActionType = {
+    type: 'CHANGE-TODOLIST-FILTER'
+    id: string
+    filter: FiltersValuesType
+}
+
+// reducer -- чистая функция. принимает стартовый стейт, объект action(кот обязат имеет св-во type) и
+// возвращает новый стейт
 
 export const todoListReducer = (state: Array<TodoListType>, action: ActionType) => {
 
@@ -30,7 +56,7 @@ export const todoListReducer = (state: Array<TodoListType>, action: ActionType) 
             return nextState;
 
         case 'CHANGE-TODOLIST-FILTER':
-            return  state.map(tl => {
+            return state.map(tl => {
                 if (tl.id === action.id) {
                     return {...tl, filter: action.filter}
                 }
@@ -41,3 +67,4 @@ export const todoListReducer = (state: Array<TodoListType>, action: ActionType) 
             throw new Error("I don't understand this type of action")
     }
 }
+
