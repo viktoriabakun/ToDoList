@@ -1,31 +1,30 @@
 import {FiltersValuesType, TodoListType} from "../App";
 import {v1} from "uuid";
-import {strict} from "assert";
 
 
-type ActionType =
+export type ActionType =
     RemoveTodoListActionType |
     AddTodoListActionType |
     ChangeTitleActionType |
     ChangeFilterActionType
 
-type RemoveTodoListActionType = {
+export type RemoveTodoListActionType = {
     type: 'REMOVE-TODOLIST'
     id: string
 }
 
-type AddTodoListActionType = {
+export type AddTodoListActionType = {
     type: 'ADD-TODOLIST'
     title: string
 }
 
-type ChangeTitleActionType = {
+export type ChangeTitleActionType = {
     type: 'CHANGE-TODOLIST-TITLE'
     id: string
     title: string
 }
 
-type ChangeFilterActionType = {
+export type ChangeFilterActionType = {
     type: 'CHANGE-TODOLIST-FILTER'
     id: string
     filter: FiltersValuesType
