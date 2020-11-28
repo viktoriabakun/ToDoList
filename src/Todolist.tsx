@@ -27,25 +27,6 @@ export type PropsType = {
 
 function Todolist(props: PropsType) {
 
-    // const [newTaskTitle, setNewTaskTitle] = useState('');
-    // const [error, setError] = useState<string | null>(null);
-
-    // const onTaskNameChange = (event: ChangeEvent<HTMLInputElement>) => {
-    //     setNewTaskTitle(event.currentTarget.value)
-    //     setError(null);
-    // }
-    // const onKeyPressHandler = (event: KeyboardEvent<HTMLInputElement>) => {
-    //     setError(null);
-    //     if (event.charCode === 13) {addTaskFunction()}
-    // }
-    // const addTaskFunction = () => {
-    //     if (newTaskTitle.trim() !== ''){
-    //         props.addTask(newTaskTitle.trim(), props.id)
-    //         setNewTaskTitle('')
-    //     } else {
-    //         setError('Title is required');
-    //     }
-    // }
     const onAllChangeFilter = () => props.changeFilter(props.id, 'all', props.id)
     const onActiveChangeFilter = () => props.changeFilter(props.id, 'active', props.id)
     const onCompletedChangeFilter = () => props.changeFilter(props.id, 'completed', props.id)
@@ -65,24 +46,13 @@ function Todolist(props: PropsType) {
             <h3><EditableSpan title={props.title}
                               saveNewTitle={changeTodoListTitle}
             />
-                {/*<button onClick={() => {*/}
-                {/*    deleteTodoList()*/}
-                {/*}}>x*/}
-                {/*</button>*/}
+
                 <IconButton onClick={deleteTodoList}>
                     <Delete/>
                 </IconButton>
             </h3>
             <AddItemForm addItem={addTask}/>
-            {/*<div>*/}
-            {/*    <input value={newTaskTitle}*/}
-            {/*           onChange={onTaskNameChange}*/}
-            {/*           onKeyPress={onKeyPressHandler}*/}
-            {/*           className={error ? 'error' : ''}*/}
-            {/*    />*/}
-            {/*    <button onClick={addTaskFunction}>+</button>*/}
-            {/*    {error && <div className='error-message'>{error}</div>}*/}
-            {/*</div>*/}
+
             <div>
                 {
                     props.tasks.map(t => {
