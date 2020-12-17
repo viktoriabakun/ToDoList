@@ -1,44 +1,26 @@
-/*.App {*/
-/*  padding: 30px;*/
-/*  display: flex;*/
-/*  flex-wrap: nowrap;*/
-/*  margin: 10px auto;*/
-/*  background-color: #ffffff;*/
-/*  font-size: 20px;*/
-/*  color: black;*/
-/*}*/
+/*
+.App {
+  padding: 30px;
+  display: flex;
+}
 
-/*.App > div {*/
-/*  margin-right: 20px;*/
-/*  margin: 0 auto;*/
-/*  background-color: #f3f0f0;*/
-/*  padding: 25px;*/
-/*  border: 1px solid rgba(255, 255, 255, 0.53);*/
-/*}*/
+.App > div {
+  margin-right: 50px;
+}
 
-/*ul > li > button {*/
-/*  margin: 5px;*/
+.error {
+  border: red 1px solid;
+}
 
-/*}*/
+.error-message {
+  color: red;
+}
 
-/*.error {*/
-/*  border: rgb(236, 109, 109) 2px solid;*/
-/*  background-color: #f6c9c9;*/
-/*}*/
+.active-filter {
+  background-color: aquamarine;
+}
 
-/*.error-message {*/
-/*  color: #f6c9c9;*/
-/*}*/
-
-/*.active-filter {*/
-/*  background-color: #0075FF;*/
-/*}*/
-
-/*button {*/
-/*  color: white;*/
-/*  background-color: #1d1d6e;*/
-/*}*/
-
-/*.is-done {*/
-/*  opacity: 0.6;*/
-/*}*/
+.is-done {
+  opacity: 0.5;
+}
+*/

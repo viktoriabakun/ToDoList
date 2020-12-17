@@ -1,49 +1,28 @@
-import React, {ChangeEvent, KeyboardEvent, useState} from "react";
-import {TextField} from "@material-ui/core";
+import React, {ChangeEvent, useState} from 'react';
+import {TextField} from '@material-ui/core';
 
-type PropsType = {
-    title: string
-    saveNewTitle: (newTitle: string) => void
+type EditableSpanPropsType = {
+    value: string
+    onChange: (newValue: string) => void
 }
 
-function EditableSpan(props: PropsType) {
+export function EditableSpan(props: EditableSpanPropsType) {
+    let [editMode, setEditMode] = useState(false);
+    let [title, setTitle] = useState(props.value);
 
-    let [editMode, setEditMode] = useState<boolean>(false)
-    let [title, setTitle] = useState<string>(props.title)
-
-    function activateEditMode() {
-        setEditMode(true)
-        setTitle(props.title)
+    const activateEditMode = () => {
+        setEditMode(true);
+        setTitle(props.value);
     }
-
-    function deActivateEditMode() {
-        setEditMode(false)
-        props.saveNewTitle(title)
+    const activateViewMode = () => {
+        setEditMode(false);
+        props.onChange(title);
     }
-
-    function changeTitle(e: ChangeEvent<HTMLInputElement>) {
+    const changeTitle = (e: ChangeEvent<HTMLInputElement>) => {
         setTitle(e.currentTarget.value)
     }
 
-    const onKeyPressHandler = (event: KeyboardEvent<HTMLInputElement>) => {
-        if (event.key === 'Enter') {
-            deActivateEditMode();
-        }
-    }
-
-    return (
-        editMode
-            ? <TextField
-                variant={'outlined'}
-                value={title}
-                onBlur={deActivateEditMode}
-                autoFocus={true}
-                onChange={changeTitle}
-                onKeyPress={onKeyPressHandler}
-            />
-            : <span onDoubleClick={activateEditMode}>{props.title}</span>
-
-    )
+    return editMode
+        ?    <TextField value={title} onChange={changeTitle} autoFocus onBlur={activateViewMode} />
+        : <span onDoubleClick={activateEditMode}>{props.value}</span>
 }
-
-export default EditableSpan;

@@ -1,32 +1,31 @@
-import React from 'react'
-
-
 type StateType = {
-    name: string
     age: number
     childrenCount: number
+    name: string
 }
-
 type ActionType = {
-    type: string,
+    type: string
     [key: string]: any
 }
 
-export const userReducer = (state: StateType, action: ActionType) => {
 
-    switch (action.type){
+export const userReducer = (state: StateType, action: ActionType): StateType => {
+    switch (action.type) {
         case 'INCREMENT-AGE':
-            return {...state, age: state.age + 1};
-
+            let newState = {...state};
+            newState.age = state.age + 1;
+            return newState;
         case 'INCREMENT-CHILDREN-COUNT':
-            return {...state, childrenCount: state.childrenCount + 1};
-
+            return {
+                ...state,
+                childrenCount: state.childrenCount + 1
+            }
         case 'CHANGE-NAME':
-            return {...state, name: action.newName}
+            return {
+                ...state,
+                name: action.newName
+            }
         default:
-            throw new Error("I don't understand this type of action")
+            throw new Error("I don't understand this action type")
     }
 }
-
-// reducer -- чистая функция. принимает стартовый стейт, объект action(кот обязат имеет св-во type) и
-// возвращает новый стейт
