@@ -99,6 +99,7 @@ export const Todolist: React.FC<PropsType> = React.memo(function Todolist({
                 tasksForTodolist.map(t => {
                     return (
                         <Task key={t.id}
+                              todolistId={id}
                               task={t}
                               onChangeHandler={onChangeHandler}
                               onClickHandler={onClickHandler}
