@@ -27,6 +27,7 @@ type PropsType = {
 
 export const Todolist = React.memo(function Todolist(props: PropsType) {
     console.log('TODOLIST')
+
     const addTask = useCallback((title: string) => {
         props.addTask(title, props.id);
     }, [props.addTask, props.id])
@@ -40,13 +41,19 @@ export const Todolist = React.memo(function Todolist(props: PropsType) {
     }, [props.changeTodolistTitle, props.id])
 
     const onAllClickHandler = useCallback(() =>
-        props.changeFilter("all", props.id), [props.changeFilter, props.id]);
+        props.changeFilter("all", props.id), [
+            // props.changeFilter, props.id
+    ]);
 
     const onActiveClickHandler = useCallback(() =>
-        props.changeFilter("active", props.id), [props.changeFilter, props.id]);
+        props.changeFilter("active", props.id), [
+            // props.changeFilter, props.id
+    ]);
 
     const onCompletedClickHandler = useCallback(() =>
-        props.changeFilter("completed", props.id), [props.changeFilter, props.id]);
+        props.changeFilter("completed", props.id), [
+            // props.changeFilter, props.id
+    ]);
 
     let tasksForTodolist = props.tasks;
 
@@ -55,6 +62,14 @@ export const Todolist = React.memo(function Todolist(props: PropsType) {
     }
     if (props.filter === "completed") {
         tasksForTodolist = props.tasks.filter(t => t.isDone === true);
+    }
+
+    const onClickHandler = (taskId: string) => props.removeTask(taskId, props.id)
+    const onChangeHandler = (taskId: string, isDone: boolean) => {
+        props.changeTaskStatus(taskId, isDone, props.id);
+    }
+    const onTitleChangeHandler = (taskId: string, title: string) => {
+        props.changeTaskTitle(title, title, props.id);
     }
 
     return <div>
@@ -67,28 +82,7 @@ export const Todolist = React.memo(function Todolist(props: PropsType) {
         <div>
             {
                 tasksForTodolist.map(t => {
-                    const onClickHandler = () => props.removeTask(t.id, props.id)
-                    const onChangeHandler = (e: ChangeEvent<HTMLInputElement>) => {
-                        let newIsDoneValue = e.currentTarget.checked;
-                        props.changeTaskStatus(t.id, newIsDoneValue, props.id);
-                    }
-                    const onTitleChangeHandler = (newValue: string) => {
-                        props.changeTaskTitle(t.id, newValue, props.id);
-                    }
 
-
-                    return <div key={t.id} className={t.isDone ? "is-done" : ""}>
-                        <Checkbox
-                            checked={t.isDone}
-                            color="primary"
-                            onChange={onChangeHandler}
-                        />
-
-                        <EditableSpan value={t.title} onChange={onTitleChangeHandler}/>
-                        <IconButton onClick={onClickHandler}>
-                            <Delete/>
-                        </IconButton>
-                    </div>
                 })
             }
         </div>
