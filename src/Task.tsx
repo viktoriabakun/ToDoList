@@ -12,7 +12,7 @@ type TaskPropsType = {
 }
 
 export const Task: React.FC<TaskPropsType> = React.memo(({task, onChangeHandler, onTitleChangeHandler, onClickHandler}) => {
-    return <div  className={task.isDone ? "is-done" : ""}>
+    return <div className={task.isDone ? "is-done" : ""}>
         <Checkbox
             checked={task.isDone}
             color="primary"

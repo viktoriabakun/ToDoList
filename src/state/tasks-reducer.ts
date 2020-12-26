@@ -1,7 +1,7 @@
-import {TasksStateType} from '../App';
 import {TaskType} from '../Todolist';
 import {v1} from 'uuid';
 import {AddTodolistActionType, RemoveTodolistActionType} from './todolists-reducer';
+import {TasksStateType} from "../AppWithRedux";
 
 export type RemoveTaskActionType = {
     type: 'REMOVE-TASK',
@@ -66,11 +66,13 @@ export const tasksReducer = (state: TasksStateType = initialState, action: Actio
             // if (task) {
             //     task.isDone = action.isDone;
             // }
-            return ({...state,
+            return ({
+                ...state,
                 [action.todolistId]: state[action.todolistId]
                     .map(task => task.id === action.taskId
                         ? {...task, isDone: action.isDone}
-                        : task)});
+                        : task)
+            });
         }
         case 'CHANGE-TASK-TITLE': {
             // let todolistTasks = state[action.todolistId];
@@ -80,11 +82,13 @@ export const tasksReducer = (state: TasksStateType = initialState, action: Actio
             // if (task) {
             //     task.title = action.title;
             // }
-            return ({...state,
+            return ({
+                ...state,
                 [action.todolistId]: state[action.todolistId]
                     .map(task => task.id === action.taskId
                         ? {...task, title: action.title}
-                        : task)});
+                        : task)
+            });
         }
         case 'ADD-TODOLIST': {
             return {
