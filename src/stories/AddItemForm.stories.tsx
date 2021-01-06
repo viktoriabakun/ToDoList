@@ -11,7 +11,9 @@ export default {
         backgroundColor: {control: 'color'},
         onClick: {
             description: 'AddItemFormExample clicked',
-        }
+
+        },
+        value: {defaultValue: 'qwerty'}
     },
 } as Meta;
 
