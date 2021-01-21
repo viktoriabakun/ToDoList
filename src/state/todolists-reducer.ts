@@ -96,7 +96,7 @@ export const getTodos = (todos: Array<TodolistType>) => ({type: 'GET-TODOS', tod
 
 // thunk
 
-export const getTodosThunk = (dispatch: Dispatch, getState: () => AppRootStateType): void => {
+export const getTodosThunk = () => (dispatch: Dispatch, getState: () => AppRootStateType): void => {
     // 1. api request
     todolistsAPI.getTodolists()
         .then((res) => {
