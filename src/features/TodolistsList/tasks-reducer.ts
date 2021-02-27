@@ -2,7 +2,7 @@ import {AddTodolistActionType, RemoveTodolistActionType, SetTodolistsActionType}
 import {TaskPriorities, TaskStatuses, TaskType, todolistsAPI, UpdateTaskModelType} from '../../api/todolists-api'
 import {Dispatch} from 'redux'
 import {AppRootStateType} from '../../app/store'
-import {setAppErrorAC, SetAppErrorActionType, setAppStatusAC, SetAppStatusActionType} from '../../app/app-reducer'
+import {SetAppErrorActionType, setAppStatusAC, SetAppStatusActionType} from '../../app/app-reducer'
 import {handleServerAppError, handleServerNetworkError} from '../../utils/error-utils'
 
 const initialState: TasksStateType = {}
@@ -20,10 +20,11 @@ export const tasksReducer = (state: TasksStateType = initialState, action: Actio
                     .map(t => t.id === action.taskId ? {...t, ...action.model} : t)
             }
         case 'ADD-TODOLIST':
-            return {...state, [action.todolist.id]: []}
+            return { [action.todolist.id]: [], ...state}
         case 'REMOVE-TODOLIST':
             const copyState = {...state}
-            delete copyState[action.id]
+            // delete copyState[action.id]
+            // с этой строчкой выдаёт ошибку
             return copyState
         case 'SET-TODOLISTS': {
             const copyState = {...state}

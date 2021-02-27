@@ -1,6 +1,15 @@
 import React, {useEffect} from 'react'
 import './App.css'
-import {AppBar, Button, Container, IconButton, LinearProgress, Toolbar, Typography} from '@material-ui/core'
+import {
+    AppBar,
+    Button,
+    Container,
+    IconButton,
+    LinearProgress,
+    MuiThemeProvider,
+    Toolbar,
+    Typography
+} from '@material-ui/core'
 import {Menu} from '@material-ui/icons'
 import {TodolistsList} from '../features/TodolistsList/TodolistsList'
 import {ErrorSnackbar} from '../components/ErrorSnackbar/ErrorSnackbar'
@@ -11,6 +20,7 @@ import {Redirect, Route, Switch} from 'react-router-dom'
 import {Login} from "../features/Login/Login";
 import CircularProgress from "@material-ui/core/CircularProgress";
 import {logoutTC} from "../features/Login/auth-reducer";
+import {theme} from "../index";
 
 
 type PropsType = {
@@ -42,18 +52,18 @@ const logoutHandler = () => {
     return (
 
         <div className="App">
-
+            <MuiThemeProvider theme={theme}>
             <ErrorSnackbar/>
-            <AppBar position="static">
+            <AppBar position="static" color='secondary'>
                 <Toolbar>
-                    <IconButton edge="start" color="inherit" aria-label="menu">
+                    <IconButton edge="start" color="primary" aria-label="menu">
                         <Menu/>
                     </IconButton>
-                    <Typography variant="h6">
-                        News
-                    </Typography>
+                    {/*<Typography variant="h6">*/}
+                    {/*    News*/}
+                    {/*</Typography>*/}
 
-                    {isLoggedIn && <Button color="inherit" onClick={logoutHandler}>Log out</Button>}
+                    {isLoggedIn && <Button  color="primary" onClick={logoutHandler}>Log out</Button>}
 
                     {/*<Button color="inherit">Login</Button>*/}
                 </Toolbar>
@@ -68,6 +78,7 @@ const logoutHandler = () => {
                 </Switch>
 
             </Container>
+            </MuiThemeProvider>
         </div>
 
     )

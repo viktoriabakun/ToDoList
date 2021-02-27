@@ -1,6 +1,10 @@
 import React, {ChangeEvent, KeyboardEvent, useState} from 'react';
-import {Box, Button, FormControl, IconButton, TextField} from '@material-ui/core';
+import {IconButton, MuiThemeProvider, TextField} from '@material-ui/core';
 import {AddBox} from '@material-ui/icons';
+import createMuiTheme from "@material-ui/core/styles/createMuiTheme";
+import red from "@material-ui/core/colors/red";
+import green from "@material-ui/core/colors/green";
+import {theme} from "../../index";
 
 type AddItemFormPropsType = {
     addItem: (title: string) => void
@@ -36,6 +40,7 @@ export const AddItemForm = React.memo(function({addItem, disabled = false}: AddI
     }
 
     return <div>
+        <MuiThemeProvider theme={theme}>
         <TextField variant="outlined"
                    disabled={disabled}
                    error={!!error}
@@ -45,8 +50,11 @@ export const AddItemForm = React.memo(function({addItem, disabled = false}: AddI
                    label="Title"
                    helperText={error}
         />
-        <IconButton color="primary" onClick={addItemHandler} disabled={disabled}>
+        <IconButton color="secondary" onClick={addItemHandler} disabled={disabled}>
             <AddBox />
         </IconButton>
+    </MuiThemeProvider>
     </div>
 })
+
+
