@@ -25,12 +25,8 @@
     <list default="true" id="693726f3-4f83-481f-b813-e63eaaf0f0fa" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/AddItemForm/AddItemForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/AddItemForm/AddItemForm.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/TodolistsList/tasks-reducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/TodolistsList/tasks-reducer.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/TodolistsList/todolists-reducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/TodolistsList/todolists-reducer.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,7 +45,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Social-Network-Samurai" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="ts.external.directory.path" value="Q:\PROG\_MAIN_\TDLIST_01\node_modules\typescript\lib" />
     <property name="vue.rearranger.settings.migration" value="true" />
@@ -94,7 +90,11 @@
       <workItem from="1611929822146" duration="15000" />
       <workItem from="1614065597288" duration="8049000" />
       <workItem from="1614107438996" duration="144000" />
-      <workItem from="1614410918143" duration="5941000" />
+      <workItem from="1614410918143" duration="8110000" />
+      <workItem from="1614975692353" duration="730000" />
+      <workItem from="1615050186028" duration="145000" />
+      <workItem from="1615197772440" duration="183000" />
+      <workItem from="1615209345266" duration="159000" />
     </task>
     <servers />
   </component>
@@ -118,31 +118,32 @@
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state x="3148" y="322" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1611759617515" />
-    <state x="3121" y="215" key="FileChooserDialogImpl" timestamp="1614107582269">
-      <screen x="1920" y="0" width="1920" height="1040" />
+    <state x="961" y="170" key="FileChooserDialogImpl" timestamp="1615209504383">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
+    <state x="961" y="170" key="FileChooserDialogImpl/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1615209504383" />
     <state x="3121" y="215" key="FileChooserDialogImpl/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1614107582269" />
-    <state x="961" y="170" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1611829389683" />
-    <state width="743" height="208" key="GridCell.Tab.0.bottom" timestamp="1614411057430">
+    <state x="961" y="170" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1614421681946" />
+    <state width="514" height="208" key="GridCell.Tab.0.bottom" timestamp="1614421683355">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="811" height="280" key="GridCell.Tab.0.bottom/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1611785981017" />
-    <state width="743" height="208" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1614411057430" />
-    <state width="743" height="208" key="GridCell.Tab.0.center" timestamp="1614411057429">
+    <state width="514" height="208" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1614421683355" />
+    <state width="514" height="208" key="GridCell.Tab.0.center" timestamp="1614421683355">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="811" height="280" key="GridCell.Tab.0.center/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1611785981017" />
-    <state width="743" height="208" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1614411057429" />
-    <state width="743" height="208" key="GridCell.Tab.0.left" timestamp="1614411057428">
+    <state width="514" height="208" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1614421683355" />
+    <state width="514" height="208" key="GridCell.Tab.0.left" timestamp="1614421683355">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="811" height="280" key="GridCell.Tab.0.left/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1611785981017" />
-    <state width="743" height="208" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1614411057428" />
-    <state width="743" height="208" key="GridCell.Tab.0.right" timestamp="1614411057430">
+    <state width="514" height="208" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1614421683355" />
+    <state width="514" height="208" key="GridCell.Tab.0.right" timestamp="1614421683355">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="811" height="280" key="GridCell.Tab.0.right/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1611785981017" />
-    <state width="743" height="208" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1614411057430" />
+    <state width="514" height="208" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1614421683355" />
     <state x="3075" y="230" width="672" height="678" key="search.everywhere.popup" timestamp="1611785302292">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
