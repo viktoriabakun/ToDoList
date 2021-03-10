@@ -5,17 +5,15 @@ import reportWebVitals from './reportWebVitals';
 import App from './app/App';
 import {Provider} from 'react-redux';
 import {store} from './app/store';
-import {BrowserRouter} from "react-router-dom";
+import {HashRouter} from "react-router-dom";
 import createMuiTheme from "@material-ui/core/styles/createMuiTheme";
-import green from "@material-ui/core/colors/green";
-import red from "@material-ui/core/colors/red";
 
 ReactDOM.render(
     <React.StrictMode>
         <Provider store={store}>
-            <BrowserRouter>
+            <HashRouter>
                 <App/>
-            </BrowserRouter>
+            </HashRouter>
         </Provider>
     </React.StrictMode>,
     document.getElementById('root')
